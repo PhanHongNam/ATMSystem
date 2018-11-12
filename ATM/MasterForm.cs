@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace ATM
 {
-    public partial class Form1 : Form
+    public partial class MasterForm : Form
     {
-        public Form1()
+        public MasterForm()
         {
             InitializeComponent();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
