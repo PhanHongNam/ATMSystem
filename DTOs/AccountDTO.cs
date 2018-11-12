@@ -13,7 +13,7 @@
 
 namespace DTOs
 {
-    class AccountDTO
+    public class AccountDTO
     {
         private string _accountId;
         private string _accountNo;

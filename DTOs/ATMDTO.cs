@@ -13,7 +13,7 @@
 
 namespace DTOs
 {
-    class ATMDTO
+    public class ATMDTO
     {
         private string _aTMId;
         private string _brand;

@@ -16,7 +16,7 @@ using System;
 
 namespace DTOs
 {
-    class LogDTO
+    public class LogDTO
     {
         private string _logId;
         private DateTime _logDate;

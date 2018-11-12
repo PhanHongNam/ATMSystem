@@ -13,7 +13,7 @@
 
 namespace DTOs
 {
-    class WithdrawLimitDTO
+    public class WithdrawLimitDTO
     {
         private string _wDId;
         private int _value;

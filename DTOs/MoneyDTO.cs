@@ -13,7 +13,7 @@
 
 namespace DTOs
 {
-    class MoneyDTO
+    public class MoneyDTO
     {
         private string _moneyId;
         private int _value;

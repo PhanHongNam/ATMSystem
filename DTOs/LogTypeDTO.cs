@@ -13,7 +13,7 @@
 
 namespace DTOs
 {
-    class LogTypeDTO
+    public class LogTypeDTO
     {
         private string _logTypeId;
         private string _description;

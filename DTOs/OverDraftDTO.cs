@@ -13,7 +13,7 @@
 
 namespace DTOs
 {
-    class OverDraftDTO
+    public class OverDraftDTO
     {
         private string _oDId;
         private int _value;

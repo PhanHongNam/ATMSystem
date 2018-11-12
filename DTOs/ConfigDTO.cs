@@ -15,7 +15,7 @@ using System;
 
 namespace DTOs
 {
-    class ConfigDTO
+    public class ConfigDTO
     {
         private string _configId;
         private int _minWithdraw;

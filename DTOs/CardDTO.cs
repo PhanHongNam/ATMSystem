@@ -15,7 +15,7 @@ using System;
 
 namespace DTOs
 {
-    class CardDTO
+    public class CardDTO
     {
         private string _cardNo;
         private string _pIN;

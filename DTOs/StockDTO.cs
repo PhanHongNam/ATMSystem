@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 
 namespace DTOs
 {
-    class StockDTO
+    public class StockDTO
     {
         private string _stockId;
         private int _quantity;
