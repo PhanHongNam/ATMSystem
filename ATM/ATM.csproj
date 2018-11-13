@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\frmChooseAmountOfMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmChooseAmountOfMoney.Designer.cs">
+      <DependentUpon>frmChooseAmountOfMoney.cs</DependentUpon>
+    </Compile>
     <Compile Include="MasterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frmChooseAmountOfMoney.resx">
+      <DependentUpon>frmChooseAmountOfMoney.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MasterForm.resx">
       <DependentUpon>MasterForm.cs</DependentUpon>
     </EmbeddedResource>
