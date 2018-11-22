@@ -46,6 +46,60 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\frmChooseAmountOfMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmChooseAmountOfMoney.Designer.cs">
+      <DependentUpon>frmChooseAmountOfMoney.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmChooseCashTranferMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmChooseCashTranferMethod.Designer.cs">
+      <DependentUpon>frmChooseCashTranferMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmChooseTypeCashTransferService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmChooseTypeCashTransferService.Designer.cs">
+      <DependentUpon>frmChooseTypeCashTransferService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmConfirmCashTransferInfomation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmConfirmCashTransferInfomation.Designer.cs">
+      <DependentUpon>frmConfirmCashTransferInfomation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmEnterAccountCardNoReceiver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmEnterAccountCardNoReceiver.Designer.cs">
+      <DependentUpon>frmEnterAccountCardNoReceiver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmEnterAccountReceiver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmEnterAccountReceiver.Designer.cs">
+      <DependentUpon>frmEnterAccountReceiver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmInvalidAccountCardNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmInvalidAccountCardNo.Designer.cs">
+      <DependentUpon>frmInvalidAccountCardNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmOverLimitAmountPerTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmOverLimitAmountPerTransaction.Designer.cs">
+      <DependentUpon>frmOverLimitAmountPerTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="MasterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +108,34 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CashTransferTransaction.cs" />
+    <EmbeddedResource Include="GUI\frmChooseAmountOfMoney.resx">
+      <DependentUpon>frmChooseAmountOfMoney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmChooseCashTranferMethod.resx">
+      <DependentUpon>frmChooseCashTranferMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmChooseTypeCashTransferService.resx">
+      <DependentUpon>frmChooseTypeCashTransferService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmConfirmCashTransferInfomation.resx">
+      <DependentUpon>frmConfirmCashTransferInfomation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmEnterAccountCardNoReceiver.resx">
+      <DependentUpon>frmEnterAccountCardNoReceiver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmEnterAccountReceiver.resx">
+      <DependentUpon>frmEnterAccountReceiver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmInvalidAccountCardNo.resx">
+      <DependentUpon>frmInvalidAccountCardNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmOverLimitAmountPerTransaction.resx">
+      <DependentUpon>frmOverLimitAmountPerTransaction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MasterForm.resx">
       <DependentUpon>MasterForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +177,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\num_button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\in_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BULs\BULs.csproj">
+      <Project>{f551e1bf-ff3b-49cc-9ce9-a3a17119ac57}</Project>
+      <Name>BULs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTOs\DTOs.csproj">
+      <Project>{d7519d14-a95c-4fd8-83b0-25014b65fd73}</Project>
+      <Name>DTOs</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

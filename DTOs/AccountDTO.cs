@@ -17,14 +17,14 @@ namespace DTOs
     {
         private string _accountId;
         private string _accountNo;
-        private long _balance;
+        private double _balance;
         private string _custId;
         private string _oDId;
         private string _wDId;
 
         public AccountDTO() { }
              
-        public AccountDTO(string accountId, string accountNo, long balance, 
+        public AccountDTO(string accountId, string accountNo, double balance, 
                             string custId, string oDId, string wDId)
         {
             AccountId = accountId;
@@ -37,7 +37,7 @@ namespace DTOs
 
         public string AccountId { get => _accountId; set => _accountId = value; }
         public string AccountNo { get => _accountNo; set => _accountNo = value; }
-        public long Balance { get => _balance; set => _balance = value; }
+        public double Balance { get => _balance; set => _balance = value; }
         public string CustId { get => _custId; set => _custId = value; }
         public string ODId { get => _oDId; set => _oDId = value; }
         public string WDId { get => _wDId; set => _wDId = value; }

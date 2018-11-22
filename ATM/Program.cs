@@ -16,7 +16,8 @@ namespace ATM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MasterForm());
+            // Application.Run(new MasterForm());
+            Application.Run(new GUI.frmHome());
         }
     }
 }
