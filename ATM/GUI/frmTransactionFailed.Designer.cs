@@ -1,6 +1,6 @@
 ﻿namespace ATM.GUI
 {
-    partial class frmEnterAccountCardNoReceiver
+    partial class frmTransactionFailed
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,8 @@
         private void InitializeComponent()
         {
             this.panelContainer = new System.Windows.Forms.Panel();
-            this.txtReceiverAccountCardNo = new System.Windows.Forms.TextBox();
-            this.lblAccountCardNo = new System.Windows.Forms.Label();
-            this.lblAccountCardNoReceiver = new System.Windows.Forms.Label();
-            this.lblAccountSend = new System.Windows.Forms.Label();
-            this.lblExtra = new System.Windows.Forms.Label();
-            this.lblEnterAccountCardNoReceiver = new System.Windows.Forms.Label();
             this.panelKeyboard = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnEnter = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -66,12 +61,7 @@
             // panelContainer
             // 
             this.panelContainer.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panelContainer.Controls.Add(this.txtReceiverAccountCardNo);
-            this.panelContainer.Controls.Add(this.lblAccountCardNo);
-            this.panelContainer.Controls.Add(this.lblAccountCardNoReceiver);
-            this.panelContainer.Controls.Add(this.lblAccountSend);
-            this.panelContainer.Controls.Add(this.lblExtra);
-            this.panelContainer.Controls.Add(this.lblEnterAccountCardNoReceiver);
+            this.panelContainer.Controls.Add(this.label1);
             this.panelContainer.Controls.Add(this.panelKeyboard);
             this.panelContainer.Controls.Add(this.btnRightFour);
             this.panelContainer.Controls.Add(this.btnRightThree);
@@ -87,81 +77,6 @@
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(1198, 661);
             this.panelContainer.TabIndex = 0;
-            // 
-            // txtReceiverAccountCardNo
-            // 
-            this.txtReceiverAccountCardNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.txtReceiverAccountCardNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReceiverAccountCardNo.ForeColor = System.Drawing.Color.Magenta;
-            this.txtReceiverAccountCardNo.Location = new System.Drawing.Point(535, 241);
-            this.txtReceiverAccountCardNo.MaxLength = 20;
-            this.txtReceiverAccountCardNo.Name = "txtReceiverAccountCardNo";
-            this.txtReceiverAccountCardNo.Size = new System.Drawing.Size(300, 27);
-            this.txtReceiverAccountCardNo.TabIndex = 7;
-            // 
-            // lblAccountCardNo
-            // 
-            this.lblAccountCardNo.AutoSize = true;
-            this.lblAccountCardNo.BackColor = System.Drawing.Color.White;
-            this.lblAccountCardNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccountCardNo.ForeColor = System.Drawing.Color.Magenta;
-            this.lblAccountCardNo.Location = new System.Drawing.Point(531, 209);
-            this.lblAccountCardNo.MinimumSize = new System.Drawing.Size(300, 20);
-            this.lblAccountCardNo.Name = "lblAccountCardNo";
-            this.lblAccountCardNo.Size = new System.Drawing.Size(300, 20);
-            this.lblAccountCardNo.TabIndex = 6;
-            this.lblAccountCardNo.Text = "27910000425835";
-            // 
-            // lblAccountCardNoReceiver
-            // 
-            this.lblAccountCardNoReceiver.AutoSize = true;
-            this.lblAccountCardNoReceiver.BackColor = System.Drawing.Color.White;
-            this.lblAccountCardNoReceiver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccountCardNoReceiver.Location = new System.Drawing.Point(336, 241);
-            this.lblAccountCardNoReceiver.MinimumSize = new System.Drawing.Size(184, 20);
-            this.lblAccountCardNoReceiver.Name = "lblAccountCardNoReceiver";
-            this.lblAccountCardNoReceiver.Size = new System.Drawing.Size(184, 20);
-            this.lblAccountCardNoReceiver.TabIndex = 6;
-            this.lblAccountCardNoReceiver.Text = "Số tài khoản thụ hưởng:";
-            // 
-            // lblAccountSend
-            // 
-            this.lblAccountSend.AutoSize = true;
-            this.lblAccountSend.BackColor = System.Drawing.Color.White;
-            this.lblAccountSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccountSend.Location = new System.Drawing.Point(336, 209);
-            this.lblAccountSend.MinimumSize = new System.Drawing.Size(184, 20);
-            this.lblAccountSend.Name = "lblAccountSend";
-            this.lblAccountSend.Size = new System.Drawing.Size(184, 20);
-            this.lblAccountSend.TabIndex = 6;
-            this.lblAccountSend.Text = "Tài khoản trích nợ:";
-            // 
-            // lblExtra
-            // 
-            this.lblExtra.AutoSize = true;
-            this.lblExtra.BackColor = System.Drawing.Color.White;
-            this.lblExtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExtra.Location = new System.Drawing.Point(404, 387);
-            this.lblExtra.MinimumSize = new System.Drawing.Size(375, 24);
-            this.lblExtra.Name = "lblExtra";
-            this.lblExtra.Size = new System.Drawing.Size(375, 24);
-            this.lblExtra.TabIndex = 5;
-            this.lblExtra.Text = "Ấn Enter để tiếp tục, Cacel để thoát";
-            this.lblExtra.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblEnterAccountCardNoReceiver
-            // 
-            this.lblEnterAccountCardNoReceiver.AutoSize = true;
-            this.lblEnterAccountCardNoReceiver.BackColor = System.Drawing.Color.White;
-            this.lblEnterAccountCardNoReceiver.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEnterAccountCardNoReceiver.ForeColor = System.Drawing.Color.Blue;
-            this.lblEnterAccountCardNoReceiver.Location = new System.Drawing.Point(404, 100);
-            this.lblEnterAccountCardNoReceiver.MinimumSize = new System.Drawing.Size(375, 24);
-            this.lblEnterAccountCardNoReceiver.Name = "lblEnterAccountCardNoReceiver";
-            this.lblEnterAccountCardNoReceiver.Size = new System.Drawing.Size(379, 24);
-            this.lblEnterAccountCardNoReceiver.TabIndex = 5;
-            this.lblEnterAccountCardNoReceiver.Text = "Xin Quý khách nhập số tài khoản thụ hưởng";
-            this.lblEnterAccountCardNoReceiver.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelKeyboard
             // 
@@ -184,6 +99,18 @@
             this.panelKeyboard.Size = new System.Drawing.Size(390, 221);
             this.panelKeyboard.TabIndex = 3;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(475, 126);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(248, 24);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Giao dịch không thành công";
+            // 
             // btnEnter
             // 
             this.btnEnter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -197,7 +124,6 @@
             this.btnEnter.TabIndex = 0;
             this.btnEnter.Text = "Enter";
             this.btnEnter.UseVisualStyleBackColor = false;
-            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // btnCancel
             // 
@@ -212,7 +138,6 @@
             this.btnCancel.TabIndex = 0;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnClear
             // 
@@ -227,7 +152,6 @@
             this.btnClear.TabIndex = 0;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnNumNine
             // 
@@ -457,17 +381,17 @@
             this.picBoxBackground.TabIndex = 0;
             this.picBoxBackground.TabStop = false;
             // 
-            // frmEnterAccountCardNoReceiver
+            // frmTransactionFailed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1198, 661);
             this.Controls.Add(this.panelContainer);
-            this.Name = "frmEnterAccountCardNoReceiver";
+            this.Name = "frmTransactionFailed";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ReceiverAccountCard";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmEnterAccountCardNoReceiver_FormClosed);
-            this.Shown += new System.EventHandler(this.frmEnterAccountCardNoReceiver_Shown);
+            this.Text = "MasterForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmTransactionFailed_FormClosed);
+            this.Shown += new System.EventHandler(this.frmTransactionFailed_Shown);
             this.panelContainer.ResumeLayout(false);
             this.panelContainer.PerformLayout();
             this.panelKeyboard.ResumeLayout(false);
@@ -502,11 +426,6 @@
         private System.Windows.Forms.Button btnNumTwo;
         private System.Windows.Forms.Button btnNumSeven;
         private System.Windows.Forms.Button btnNumFour;
-        private System.Windows.Forms.Label lblEnterAccountCardNoReceiver;
-        private System.Windows.Forms.TextBox txtReceiverAccountCardNo;
-        private System.Windows.Forms.Label lblAccountCardNo;
-        private System.Windows.Forms.Label lblAccountCardNoReceiver;
-        private System.Windows.Forms.Label lblAccountSend;
-        private System.Windows.Forms.Label lblExtra;
+        private System.Windows.Forms.Label label1;
     }
 }

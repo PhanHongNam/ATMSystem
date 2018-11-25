@@ -14,7 +14,7 @@ namespace ATM.GUI
     {
         private int selectRowIndex = 0;
         List<Label> labels;
-        frmHome _parent;
+        frmMain _parent;
         CashTransferTransaction _cash;
         public frmChooseTypeCashTransferService()
         {
@@ -23,7 +23,7 @@ namespace ATM.GUI
             SetActiveBackgroundForLabel();
         }
 
-        public frmChooseTypeCashTransferService(frmHome parent,
+        public frmChooseTypeCashTransferService(frmMain parent,
                                                 CashTransferTransaction cash)
         {
             InitializeComponent();

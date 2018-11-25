@@ -510,6 +510,7 @@
             this.btnRightThree.Size = new System.Drawing.Size(68, 40);
             this.btnRightThree.TabIndex = 2;
             this.btnRightThree.UseVisualStyleBackColor = true;
+            this.btnRightThree.Click += new System.EventHandler(this.btnRightThree_Click);
             // 
             // btnRightTwo
             // 

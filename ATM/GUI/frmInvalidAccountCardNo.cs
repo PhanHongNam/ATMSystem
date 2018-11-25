@@ -13,13 +13,13 @@ namespace ATM.GUI
 {
     public partial class frmInvalidAccountCardNo : Form
     {
-        frmHome _parent;
+        frmMain _parent;
         public frmInvalidAccountCardNo()
         {
             InitializeComponent();
         }
 
-        public frmInvalidAccountCardNo(frmHome home)
+        public frmInvalidAccountCardNo(frmMain home)
         {
             InitializeComponent();
             _parent = home;

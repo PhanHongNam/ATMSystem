@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace ATM.GUI
 {
-    public partial class frmHome : Form
+    public partial class frmMain : Form
     {
         private CashTransferTransaction ctt = new CashTransferTransaction();
-        public frmHome()
+        public frmMain()
         {
             InitializeComponent();
             ctt.ATMId = "206829d2-b074-46dd-ace2-f9804d9d1b0b";

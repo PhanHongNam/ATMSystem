@@ -21,5 +21,22 @@ namespace BULs
         {
             return transferDAL.GetCustomerInfor(accountNo, type);
         }
+
+        public void PerformCashTransferTransaction(string atmID, string sendCardNo,
+                                                    string sendAccNo, string sendODID,
+                                                    string receiAccNo, int amount,
+                                                    out int result, out Guid logId,
+                                                    decimal transferFee, out decimal availBal)
+        {
+            transferDAL.PerformCashTransferTransaction(atmID, sendCardNo, sendAccNo, 
+                                                        sendODID, receiAccNo,amount, 
+                                                        out result, out logId, 
+                                                        transferFee, out availBal);
+        }
+
+        public LogDTO GetTransferLog(Guid logId)
+        {
+            return transferDAL.GetTransferLog(logId);
+        }
     }
 }

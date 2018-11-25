@@ -15,7 +15,7 @@ namespace ATM.GUI
 {
     public partial class frmChooseAmountOfMoney : Form
     {
-        private frmHome _parent;
+        private frmMain _parent;
         private CashTransferTransaction _cash;
         private string _accountCardReceiverString;
         List<Button> _buttons;
@@ -25,7 +25,7 @@ namespace ATM.GUI
             InitializeComponent();
         }
 
-        public frmChooseAmountOfMoney(frmHome home, CashTransferTransaction cash)
+        public frmChooseAmountOfMoney(frmMain home, CashTransferTransaction cash)
         {
             InitializeComponent();
             this._parent = home;
@@ -59,7 +59,10 @@ namespace ATM.GUI
         {
             lblAccountSendNo.Text = _cash.SenderAccountNo;
             lblAccountCardReceiver.Text = _accountCardReceiverString;
-            lblAccountCardNoReceiver.Text = _cash.ReceiverAccountCardNo;
+            if (_cash.TransferService == 0)
+                lblAccountCardNoReceiver.Text = _cash.ReceiverAccountNo;
+            else if (_cash.TransferService == 1)
+                lblAccountCardNoReceiver.Text = _cash.ReceiverCardNo;
         }
 
         private void AddNumberButon()
@@ -118,7 +121,8 @@ namespace ATM.GUI
                     int getType = _cash.TransferType == 0 ? 0 :
                                    _cash.TransferService;
                     CustomerDTO customerDTO = 
-                        transferBUL.GetCustomerInfoByAccountNo(_cash.ReceiverAccountCardNo, 
+                        transferBUL.GetCustomerInfoByAccountNo(_cash.TransferType == 0 || _cash.TransferService == 0 
+                                                                ? _cash.ReceiverAccountNo : _cash.ReceiverCardNo, 
                                                                getType);
                     if (String.IsNullOrEmpty(customerDTO.Name))
                     {

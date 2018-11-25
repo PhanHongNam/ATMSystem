@@ -15,7 +15,7 @@ namespace ATM.GUI
     public partial class frmEnterAccountCardNoReceiver : Form
     {
         private CashTransferTransaction _cash;
-        private frmHome _parent;
+        private frmMain _parent;
         private string _transferString;
         private string _accountCardReceiverString;
         List<Button> _buttons;
@@ -26,7 +26,7 @@ namespace ATM.GUI
             InitializeComponent();
         }
 
-        public frmEnterAccountCardNoReceiver(frmHome home, CashTransferTransaction cash)
+        public frmEnterAccountCardNoReceiver(frmMain home, CashTransferTransaction cash)
         {
             InitializeComponent();
             _cash = cash;
@@ -101,7 +101,10 @@ namespace ATM.GUI
         {
             if (!String.IsNullOrEmpty(txtReceiverAccountCardNo.Text))
             {
-                _cash.ReceiverAccountCardNo = txtReceiverAccountCardNo.Text;
+                if (_cash.TransferService == 0)
+                    _cash.ReceiverAccountNo = txtReceiverAccountCardNo.Text;
+                else
+                    _cash.ReceiverCardNo = txtReceiverAccountCardNo.Text;
                 frmChooseAmountOfMoney fcaom =
                     new frmChooseAmountOfMoney(_parent,
                                                 _cash);

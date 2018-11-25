@@ -14,7 +14,7 @@ namespace ATM.GUI
 {
     public partial class frmEnterAccountReceiver : Form
     {
-        frmHome _parent;
+        frmMain _parent;
         CashTransferTransaction _cash;
         List<Button> _buttons;
         CashTransferBUL transferBUL = new CashTransferBUL();
@@ -24,7 +24,7 @@ namespace ATM.GUI
             InitializeComponent();
         }
 
-        public frmEnterAccountReceiver(frmHome home, CashTransferTransaction cash)
+        public frmEnterAccountReceiver(frmMain home, CashTransferTransaction cash)
         {
             InitializeComponent();
             this._parent = home;
@@ -32,7 +32,6 @@ namespace ATM.GUI
             
             accountDTO = transferBUL.GetAccountInfoByCardNo(_cash.SenderCardNo);
             _cash.SenderAccountNo = accountDTO.AccountNo;
-            _cash.SenderBalance = accountDTO.Balance;
             _cash.SenderOverDraftId = accountDTO.ODId;
             lblAccountSendNo.Text = accountDTO.AccountNo;
             AddNumberButon();
@@ -87,7 +86,7 @@ namespace ATM.GUI
         {
             if (!String.IsNullOrEmpty(txtAccountReceiverNo.Text))
             {
-                _cash.ReceiverAccountCardNo = txtAccountReceiverNo.Text;
+                _cash.ReceiverAccountNo = txtAccountReceiverNo.Text;
                 frmChooseAmountOfMoney fcaom = new frmChooseAmountOfMoney(_parent, _cash);
                 this.Close();
                 fcaom.Show();

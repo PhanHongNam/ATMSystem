@@ -14,14 +14,14 @@ namespace ATM.GUI
 {
     public partial class frmOverLimitAmountPerTransaction : Form
     {
-        frmHome _parent;
+        frmMain _parent;
         uint _amount;
         public frmOverLimitAmountPerTransaction()
         {
             InitializeComponent();
         }
 
-        public frmOverLimitAmountPerTransaction(frmHome home, uint amount)
+        public frmOverLimitAmountPerTransaction(frmMain home, uint amount)
         {
             InitializeComponent();
             _parent = home;
@@ -42,7 +42,7 @@ namespace ATM.GUI
                 Thread.Sleep(3000);
             });
             task.Wait();
-            // this.Close();
+            this.Close(); 
         }
 
         private void frmOverLimitAmountPerTransaction_Load(object sender, EventArgs e)

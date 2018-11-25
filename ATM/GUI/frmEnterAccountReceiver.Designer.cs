@@ -98,7 +98,6 @@
             this.txtAccountReceiverNo.Location = new System.Drawing.Point(483, 231);
             this.txtAccountReceiverNo.MaxLength = 20;
             this.txtAccountReceiverNo.Name = "txtAccountReceiverNo";
-            this.txtAccountReceiverNo.ReadOnly = true;
             this.txtAccountReceiverNo.Size = new System.Drawing.Size(300, 27);
             this.txtAccountReceiverNo.TabIndex = 9;
             // 

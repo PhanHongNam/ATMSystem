@@ -12,14 +12,14 @@ namespace ATM.GUI
 {
     public partial class frmChooseCashTranferMethod : Form
     {
-        private frmHome _parent;
+        private frmMain _parent;
         CashTransferTransaction _cash;
         public frmChooseCashTranferMethod()
         {
             InitializeComponent();
         }
 
-        public frmChooseCashTranferMethod(frmHome home, CashTransferTransaction cash)
+        public frmChooseCashTranferMethod(frmMain home, CashTransferTransaction cash)
         {
             InitializeComponent();
             this._parent = home;
