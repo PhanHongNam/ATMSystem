@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace ATM.GUI
@@ -20,14 +21,17 @@ namespace ATM.GUI
 
         public frmTransactionFailed(frmMain main)
         {
-            InitializeComponent();
             _main = main;
+            InitializeComponent();
         }
 
         private void frmTransactionFailed_Shown(object sender, EventArgs e)
         {
             if (_main != null)
+            {
                 _main.Hide();
+            }
+               
         }
 
         private void frmTransactionFailed_FormClosed(object sender, FormClosedEventArgs e)

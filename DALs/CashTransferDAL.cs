@@ -77,8 +77,8 @@ namespace DALs
         public void PerformCashTransferTransaction(string atmID, string sendCardNo, 
                                                     string sendAccNo, string sendODID, 
                                                     string receiAccNo, int amount, 
-                                                    out int result, out Guid logId, 
-                                                    decimal transferFee, out decimal availBal)
+                                                    out int result, out Guid? logId, 
+                                                    decimal transferFee, out decimal? availBal)
         {
             SqlConnection connection = GetSqlConnection();
             connection.Open();
@@ -103,8 +103,13 @@ namespace DALs
             command.Parameters.Add(availBalPara);
             command.ExecuteNonQuery();
             result = (int)resultPara.Value;
-            logId = (Guid)logIdPara.Value;
-            availBal = (decimal)availBalPara.Value;
+            logId = null;
+            availBal = null;
+            if (result != 0)
+            {
+                logId = (Guid)logIdPara.Value;
+                availBal = (decimal)availBalPara.Value;
+            }
             connection.Close();
         }
 
@@ -121,7 +126,7 @@ namespace DALs
             {
                 log.LogId = dataReader[0].ToString();
                 log.LogDate = Convert.ToDateTime(dataReader[1].ToString());
-                log.Amount = int.Parse(dataReader[2].ToString());
+                log.Amount = (int)decimal.Parse(dataReader[2].ToString());
                 log.Details = dataReader[3].ToString();
                 log.LogTypeId = dataReader[4].ToString();
                 log.ATMId = dataReader[4].ToString();

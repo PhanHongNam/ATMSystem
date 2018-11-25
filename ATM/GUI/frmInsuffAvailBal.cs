@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace ATM.GUI
 {
@@ -20,8 +21,17 @@ namespace ATM.GUI
 
         public frmInsuffAvailBal(frmMain main)
         {
-            InitializeComponent();
             _main = main;
+            InitializeComponent();
+        }
+
+        private void frmInsuffAvailBal_Shown(object sender, EventArgs e)
+        {
+            if (_main != null)
+            {
+                _main.Hide();
+            }
+            
         }
     }
 }

@@ -37,15 +37,15 @@ namespace ATM.GUI
                 lblAmount.Text = _cash.Amount.ToString();
                 if (_cash.Amount < 10000)
                     _cash.TransferFee = 0;
-                else if (_cash.Amount < 3000000)
+                else if (_cash.Amount < 30000000)
                     _cash.TransferFee = 1000;
-                else if (_cash.Amount > 3000000)
+                else if (_cash.Amount > 30000000)
                 {
-                    _cash.TransferFee = 0.1m * _cash.Amount;
+                    _cash.TransferFee = 0.0001m * _cash.Amount;
                     if (_cash.TransferFee > 9000)
                         _cash.TransferFee = 9000;
                 }
-                lblTransactionFee.Text = _cash.TransferFee.ToString();
+                lblTransactionFee.Text = _cash.TransferFee.ToString("N");
             } else
             {
                 lblSendAccount.Text = "Tài khoản trích nợ";
@@ -68,22 +68,20 @@ namespace ATM.GUI
 
         private void frmConfirmCashTransferInfomation_FormClosed(object sender, FormClosedEventArgs e)
         {
-            _parent.Show();
+            if (_parent != null)
+                _parent.Show();
         }
 
-        private void btnRightThree_Click(object sender, EventArgs e)
+        private async void btnRightThree_Click(object sender, EventArgs e)
         {
             frmPerformingTransaction performingTransaction = new frmPerformingTransaction();
             this.Hide();
             performingTransaction.Show();
-            Task task = Task.Run(() => 
-               Thread.Sleep(3000)
-            );
-            task.Wait();
+            await Task.Delay(3000);
             performingTransaction.Close();
             int result = -1;
-            Guid logId;
-            decimal availBal;
+            Guid? logId;
+            decimal? availBal;
             transferBUL.PerformCashTransferTransaction(_cash.ATMId, _cash.SenderCardNo,
                                                         _cash.SenderAccountNo, _cash.SenderOverDraftId,
                                                         _cash.ReceiverAccountNo, _cash.Amount,
@@ -93,17 +91,17 @@ namespace ATM.GUI
             {
                 frmInsuffAvailBal insuffAvailBal = new frmInsuffAvailBal(_parent);
                 insuffAvailBal.Show();
-                task.Wait();
+                await Task.Delay(3000);
                 insuffAvailBal.Close();
                 frmTransactionFailed transactionFailed = new frmTransactionFailed(_parent);
-                this.Close();
                 transactionFailed.Show();
-                task.Wait();
+                await Task.Delay(3000);
                 transactionFailed.Close();
+                this.Close();
             } else if (result == 1)
             {
-                _cash.LogId = logId;
-                _cash.AvailBalance = availBal;
+                _cash.LogId = (Guid)logId;
+                _cash.AvailBalance = (decimal)availBal;
                 frmPrintReceipt frmPrintReceipt = new frmPrintReceipt(_parent, _cash);
                 this.Close();
                 frmPrintReceipt.Show();

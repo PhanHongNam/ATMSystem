@@ -38,12 +38,14 @@ namespace ATM.GUI
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
-            _parent.Show();
+            if (_parent != null)
+                _parent.Show();
         }
 
         private void frmChooseCashTranferMethod_FormClosed(object sender, FormClosedEventArgs e)
         {
-            _parent.Show();
+            if (_parent != null)
+                _parent.Show();
         }
 
         private void btnLeftOne_Click(object sender, EventArgs e)

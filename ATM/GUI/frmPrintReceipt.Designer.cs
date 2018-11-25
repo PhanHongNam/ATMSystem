@@ -337,6 +337,7 @@
             this.btnRightFour.Size = new System.Drawing.Size(68, 40);
             this.btnRightFour.TabIndex = 2;
             this.btnRightFour.UseVisualStyleBackColor = true;
+            this.btnRightFour.Click += new System.EventHandler(this.btnRightFour_Click);
             // 
             // btnRightThree
             // 
@@ -434,7 +435,7 @@
             this.Controls.Add(this.panelContainer);
             this.Name = "frmPrintReceipt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MasterForm";
+            this.Text = "PrintReceipt";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPrintReceipt_FormClosed);
             this.Shown += new System.EventHandler(this.frmPrintReceipt_Shown);
             this.panelContainer.ResumeLayout(false);

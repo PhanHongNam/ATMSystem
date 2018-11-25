@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panelContainer = new System.Windows.Forms.Panel();
-            this.panelKeyboard = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelKeyboard = new System.Windows.Forms.Panel();
             this.btnEnter = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -78,6 +78,18 @@
             this.panelContainer.Size = new System.Drawing.Size(1198, 661);
             this.panelContainer.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(475, 126);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(248, 24);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Giao dịch không thành công";
+            // 
             // panelKeyboard
             // 
             this.panelKeyboard.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -98,18 +110,6 @@
             this.panelKeyboard.Name = "panelKeyboard";
             this.panelKeyboard.Size = new System.Drawing.Size(390, 221);
             this.panelKeyboard.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(475, 126);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(248, 24);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Giao dịch không thành công";
             // 
             // btnEnter
             // 
@@ -389,7 +389,7 @@
             this.Controls.Add(this.panelContainer);
             this.Name = "frmTransactionFailed";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MasterForm";
+            this.Text = "TransactionFailed";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmTransactionFailed_FormClosed);
             this.Shown += new System.EventHandler(this.frmTransactionFailed_Shown);
             this.panelContainer.ResumeLayout(false);

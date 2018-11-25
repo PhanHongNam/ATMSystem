@@ -25,8 +25,8 @@ namespace BULs
         public void PerformCashTransferTransaction(string atmID, string sendCardNo,
                                                     string sendAccNo, string sendODID,
                                                     string receiAccNo, int amount,
-                                                    out int result, out Guid logId,
-                                                    decimal transferFee, out decimal availBal)
+                                                    out int result, out Guid? logId,
+                                                    decimal transferFee, out decimal? availBal)
         {
             transferDAL.PerformCashTransferTransaction(atmID, sendCardNo, sendAccNo, 
                                                         sendODID, receiAccNo,amount, 

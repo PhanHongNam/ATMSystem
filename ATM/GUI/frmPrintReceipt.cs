@@ -13,6 +13,7 @@ using BULs;
 using DTOs;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using System.Diagnostics;
 
 namespace ATM.GUI
 {
@@ -22,7 +23,9 @@ namespace ATM.GUI
         CashTransferTransaction _cash;
         CashTransferBUL transferBUL = new CashTransferBUL();
         LogDTO log = new LogDTO();
-        
+        string pdfPath = @"C:\Users\namph\source\repos\ATMSystem\ATM\Resources\cash_transfer.pdf";
+
+
         public frmPrintReceipt()
         {
             InitializeComponent();
@@ -44,7 +47,7 @@ namespace ATM.GUI
         private void frmPrintReceipt_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (_main != null)
-                _main.Close();
+                _main.Show();
         }
 
         private void btnRightThree_Click(object sender, EventArgs e)
@@ -52,13 +55,25 @@ namespace ATM.GUI
             log = transferBUL.GetTransferLog(_cash.LogId);
             _cash.LogId = _cash.LogId;
             _cash.LogDate = log.LogDate;
+            PrintReceipt();
+            try
+            {
+                Process.Start(pdfPath);
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+            frmPerformAnotherTrans performAnotherTrans = new frmPerformAnotherTrans(_main);
+            performAnotherTrans.Show();
+            this.Close();
         }
 
         private void PrintReceipt()
         {
             FileStream fs = new
-                FileStream(@"F:\C#\ATMSystem\ATM\Resources\cash_transfer.pdf",
+                FileStream(pdfPath,
                             FileMode.Create,
                             FileAccess.Write,
                             FileShare.None);
@@ -70,7 +85,7 @@ namespace ATM.GUI
             doc.Open();
             iTextSharp.text.Font headerFont = FontFactory.GetFont("Verdana", 8);
             iTextSharp.text.Font emptyFont = FontFactory.GetFont("Verdana", 5);
-            string imageURL = @"F:\C#\ATMSystem\ATM\Resources\bidv_logo.png";
+            string imageURL = @"C:\Users\namph\source\repos\ATMSystem\ATM\Resources\bidv_logo.png";
             iTextSharp.text.Image jpg = iTextSharp.text.Image.GetInstance(imageURL);
             jpg.Alignment = Element.ALIGN_CENTER;
             jpg.ScaleToFit(240f, 120f);
@@ -97,7 +112,7 @@ namespace ATM.GUI
             Phrase pATMID = new Phrase(_cash.ATMId, headerFont);
             string sendCardNo =
                 _cash.
-                    SenderCardNo.Remove(2, 8).Insert(2, "XXXXXXXX");
+                    SenderCardNo.Remove(2, 10).Insert(2, "XXXXXXXX");
             PdfPCell cCardNo =
                 new PdfPCell(
                     new Phrase(
@@ -116,15 +131,15 @@ namespace ATM.GUI
             PdfPCell cAvailBal =
                 new PdfPCell(
                     new Phrase(
-                        String.Format("SO DU KHA DUNG     :  1,570,056",
-                                        _cash.AvailBalance),
+                        String.Format("SO DU KHA DUNG     :  {0}",
+                                        _cash.AvailBalance.ToString("N")),
                         headerFont));
             cAvailBal.Colspan = 3;
             cAvailBal.Border = iTextSharp.text.Rectangle.NO_BORDER;
             PdfPCell cSendAccNo =
                 new PdfPCell(
                     new Phrase(String.Format("TK CHUYEN TIEN      :  {0}",
-                                                _cash.ReceiverAccountNo),
+                                                _cash.SenderAccountNo),
                                 headerFont));
             cSendAccNo.Colspan = 3;
             cSendAccNo.Border = iTextSharp.text.Rectangle.NO_BORDER;
@@ -147,7 +162,7 @@ namespace ATM.GUI
                 new PdfPCell(
                     new Phrase(
                         String.Format("SO TIEN                      :  {0} VND",
-                            _cash.Amount),
+                            _cash.Amount.ToString("N")),
                         headerFont));
             cAmount.Colspan = 3;
             cAmount.Border = iTextSharp.text.Rectangle.NO_BORDER;
@@ -155,7 +170,7 @@ namespace ATM.GUI
                 new PdfPCell(
                     new Phrase(
                         String.Format("PHI DICH VU:  {0} VND",
-                                                _cash.TransferFee),
+                                                _cash.TransferFee.ToString("N")),
                         headerFont));
             cFee.Colspan = 3;
             cFee.Border = iTextSharp.text.Rectangle.NO_BORDER;
@@ -184,7 +199,7 @@ namespace ATM.GUI
             doc.Add(table);
 
             FileStream fs1 =
-                new FileStream(@"F:\C#\ATMSystem\ATM\Resources\watermark.png",
+                new FileStream(@"C:\Users\namph\source\repos\ATMSystem\ATM\Resources\watermark.png",
                                 FileMode.Open);
             iTextSharp.text.Image watermark =
                 iTextSharp.text.Image.GetInstance(System.Drawing.Image.FromStream(fs1),
@@ -193,19 +208,26 @@ namespace ATM.GUI
             watermark.SetAbsolutePosition(60f, 70f);
             fs1.Close();
             FileStream fs2 =
-                new FileStream(@"F:\C#\ATMSystem\ATM\Resources\footer.png",
+                new FileStream(@"C:\Users\namph\source\repos\ATMSystem\ATM\Resources\footer.png",
                                 FileMode.Open);
 
 
             iTextSharp.text.Image footer =
                 iTextSharp.text.Image.GetInstance(System.Drawing.Image.FromStream(fs2),
                                                     ImageFormat.Png);
-            footer.ScalePercent(75f);
-            footer.SetAbsolutePosition(3f, 20f);
+            footer.ScalePercent(80f);
+            footer.SetAbsolutePosition(3f, 25f);
             fs2.Close();
             doc.Add(footer);
             doc.Add(watermark);
             doc.Close();
+        }
+
+        private void btnRightFour_Click(object sender, EventArgs e)
+        {
+            frmPerformAnotherTrans performAnotherTrans = new frmPerformAnotherTrans(_main);
+            performAnotherTrans.Show();
+            this.Close();
         }
     }
 }

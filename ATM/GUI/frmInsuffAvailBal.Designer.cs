@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelKeyboard = new System.Windows.Forms.Panel();
             this.btnEnter = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@
             this.btnLeftTwo = new System.Windows.Forms.Button();
             this.btnLeftOne = new System.Windows.Forms.Button();
             this.picBoxBackground = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelContainer.SuspendLayout();
             this.panelKeyboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxBackground)).BeginInit();
@@ -77,6 +77,18 @@
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(1198, 661);
             this.panelContainer.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(501, 183);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(197, 24);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "INSUFF AVAIL BAL(5)";
             // 
             // panelKeyboard
             // 
@@ -369,18 +381,6 @@
             this.picBoxBackground.TabIndex = 0;
             this.picBoxBackground.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(501, 183);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 24);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "INSUFF AVAIL BAL(5)";
-            // 
             // frmInsuffAvailBal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,7 +389,8 @@
             this.Controls.Add(this.panelContainer);
             this.Name = "frmInsuffAvailBal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MasterForm";
+            this.Text = "InsuffAvailBal";
+            this.Shown += new System.EventHandler(this.frmInsuffAvailBal_Shown);
             this.panelContainer.ResumeLayout(false);
             this.panelContainer.PerformLayout();
             this.panelKeyboard.ResumeLayout(false);

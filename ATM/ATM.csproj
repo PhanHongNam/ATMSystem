@@ -109,6 +109,12 @@
     <Compile Include="GUI\frmOverLimitAmountPerTransaction.Designer.cs">
       <DependentUpon>frmOverLimitAmountPerTransaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmPerformAnotherTrans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmPerformAnotherTrans.Designer.cs">
+      <DependentUpon>frmPerformAnotherTrans.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmPerformingTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmOverLimitAmountPerTransaction.resx">
       <DependentUpon>frmOverLimitAmountPerTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmPerformAnotherTrans.resx">
+      <DependentUpon>frmPerformAnotherTrans.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmPerformingTransaction.resx">
       <DependentUpon>frmPerformingTransaction.cs</DependentUpon>
@@ -230,6 +239,11 @@
       <Project>{d7519d14-a95c-4fd8-83b0-25014b65fd73}</Project>
       <Name>DTOs</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\bidv_logo.png" />
+    <Content Include="Resources\footer.png" />
+    <Content Include="Resources\watermark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

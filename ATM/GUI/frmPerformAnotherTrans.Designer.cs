@@ -1,6 +1,6 @@
 ﻿namespace ATM.GUI
 {
-    partial class frmConfirmCashTransferInfomation
+    partial class frmPerformAnotherTrans
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,8 @@
         private void InitializeComponent()
         {
             this.panelContainer = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.lblTransactionFee = new System.Windows.Forms.Label();
-            this.lblAmount = new System.Windows.Forms.Label();
-            this.lblReceiverName = new System.Windows.Forms.Label();
-            this.lblReceiverAccountCardNo = new System.Windows.Forms.Label();
-            this.lblSendAccountNo = new System.Windows.Forms.Label();
-            this.lblSendAccount = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblReceiverAccountCard = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelKeyboard = new System.Windows.Forms.Panel();
             this.btnEnter = new System.Windows.Forms.Button();
@@ -74,19 +63,8 @@
             // panelContainer
             // 
             this.panelContainer.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panelContainer.Controls.Add(this.button2);
             this.panelContainer.Controls.Add(this.button1);
-            this.panelContainer.Controls.Add(this.lblTransactionFee);
-            this.panelContainer.Controls.Add(this.lblAmount);
-            this.panelContainer.Controls.Add(this.lblReceiverName);
-            this.panelContainer.Controls.Add(this.lblReceiverAccountCardNo);
-            this.panelContainer.Controls.Add(this.lblSendAccountNo);
-            this.panelContainer.Controls.Add(this.lblSendAccount);
-            this.panelContainer.Controls.Add(this.label7);
-            this.panelContainer.Controls.Add(this.label6);
-            this.panelContainer.Controls.Add(this.label5);
-            this.panelContainer.Controls.Add(this.label4);
-            this.panelContainer.Controls.Add(this.lblReceiverAccountCard);
+            this.panelContainer.Controls.Add(this.button2);
             this.panelContainer.Controls.Add(this.label1);
             this.panelContainer.Controls.Add(this.panelKeyboard);
             this.panelContainer.Controls.Add(this.btnRightFour);
@@ -104,19 +82,6 @@
             this.panelContainer.Size = new System.Drawing.Size(1198, 661);
             this.panelContainer.TabIndex = 0;
             // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::ATM.Properties.Resources.in_button;
-            this.button2.Location = new System.Drawing.Point(733, 315);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 50);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Có";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -126,163 +91,22 @@
             this.button1.Location = new System.Drawing.Point(733, 382);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(250, 50);
-            this.button1.TabIndex = 6;
+            this.button1.TabIndex = 8;
             this.button1.Text = "Không";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // lblTransactionFee
+            // button2
             // 
-            this.lblTransactionFee.AutoSize = true;
-            this.lblTransactionFee.BackColor = System.Drawing.Color.White;
-            this.lblTransactionFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTransactionFee.ForeColor = System.Drawing.Color.Magenta;
-            this.lblTransactionFee.Location = new System.Drawing.Point(447, 254);
-            this.lblTransactionFee.MinimumSize = new System.Drawing.Size(400, 20);
-            this.lblTransactionFee.Name = "lblTransactionFee";
-            this.lblTransactionFee.Size = new System.Drawing.Size(400, 20);
-            this.lblTransactionFee.TabIndex = 5;
-            this.lblTransactionFee.Text = "7,700";
-            this.lblTransactionFee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblAmount
-            // 
-            this.lblAmount.AutoSize = true;
-            this.lblAmount.BackColor = System.Drawing.Color.White;
-            this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmount.ForeColor = System.Drawing.Color.Magenta;
-            this.lblAmount.Location = new System.Drawing.Point(447, 224);
-            this.lblAmount.MinimumSize = new System.Drawing.Size(400, 20);
-            this.lblAmount.Name = "lblAmount";
-            this.lblAmount.Size = new System.Drawing.Size(400, 20);
-            this.lblAmount.TabIndex = 5;
-            this.lblAmount.Text = "10,000";
-            this.lblAmount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblReceiverName
-            // 
-            this.lblReceiverName.AutoSize = true;
-            this.lblReceiverName.BackColor = System.Drawing.Color.White;
-            this.lblReceiverName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReceiverName.ForeColor = System.Drawing.Color.Magenta;
-            this.lblReceiverName.Location = new System.Drawing.Point(447, 192);
-            this.lblReceiverName.MinimumSize = new System.Drawing.Size(400, 20);
-            this.lblReceiverName.Name = "lblReceiverName";
-            this.lblReceiverName.Size = new System.Drawing.Size(400, 20);
-            this.lblReceiverName.TabIndex = 5;
-            this.lblReceiverName.Text = "PHAN HONG NAM";
-            this.lblReceiverName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblReceiverAccountCardNo
-            // 
-            this.lblReceiverAccountCardNo.AutoSize = true;
-            this.lblReceiverAccountCardNo.BackColor = System.Drawing.Color.White;
-            this.lblReceiverAccountCardNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReceiverAccountCardNo.ForeColor = System.Drawing.Color.Magenta;
-            this.lblReceiverAccountCardNo.Location = new System.Drawing.Point(447, 155);
-            this.lblReceiverAccountCardNo.MinimumSize = new System.Drawing.Size(400, 20);
-            this.lblReceiverAccountCardNo.Name = "lblReceiverAccountCardNo";
-            this.lblReceiverAccountCardNo.Size = new System.Drawing.Size(400, 20);
-            this.lblReceiverAccountCardNo.TabIndex = 5;
-            this.lblReceiverAccountCardNo.Text = "9704050779593248";
-            this.lblReceiverAccountCardNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblSendAccountNo
-            // 
-            this.lblSendAccountNo.AutoSize = true;
-            this.lblSendAccountNo.BackColor = System.Drawing.Color.White;
-            this.lblSendAccountNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSendAccountNo.ForeColor = System.Drawing.Color.Magenta;
-            this.lblSendAccountNo.Location = new System.Drawing.Point(447, 122);
-            this.lblSendAccountNo.MinimumSize = new System.Drawing.Size(400, 20);
-            this.lblSendAccountNo.Name = "lblSendAccountNo";
-            this.lblSendAccountNo.Size = new System.Drawing.Size(400, 20);
-            this.lblSendAccountNo.TabIndex = 5;
-            this.lblSendAccountNo.Text = "2791000524835";
-            this.lblSendAccountNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblSendAccount
-            // 
-            this.lblSendAccount.AutoSize = true;
-            this.lblSendAccount.BackColor = System.Drawing.Color.White;
-            this.lblSendAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSendAccount.ForeColor = System.Drawing.Color.Blue;
-            this.lblSendAccount.Location = new System.Drawing.Point(218, 122);
-            this.lblSendAccount.MinimumSize = new System.Drawing.Size(200, 20);
-            this.lblSendAccount.Name = "lblSendAccount";
-            this.lblSendAccount.Size = new System.Drawing.Size(200, 20);
-            this.lblSendAccount.TabIndex = 5;
-            this.lblSendAccount.Text = "Tài khoản trích nợ";
-            this.lblSendAccount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Blue;
-            this.label7.Location = new System.Drawing.Point(218, 284);
-            this.label7.MinimumSize = new System.Drawing.Size(200, 20);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(200, 20);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "(Đã bao gồm cả VAT)";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Blue;
-            this.label6.Location = new System.Drawing.Point(218, 254);
-            this.label6.MinimumSize = new System.Drawing.Size(200, 20);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(200, 20);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Phí giao dịch";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Blue;
-            this.label5.Location = new System.Drawing.Point(218, 224);
-            this.label5.MinimumSize = new System.Drawing.Size(200, 20);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(200, 20);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Số tiền";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(218, 192);
-            this.label4.MinimumSize = new System.Drawing.Size(200, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(200, 20);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Tên chủ TK nhận tiền";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblReceiverAccountCard
-            // 
-            this.lblReceiverAccountCard.AutoSize = true;
-            this.lblReceiverAccountCard.BackColor = System.Drawing.Color.White;
-            this.lblReceiverAccountCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReceiverAccountCard.ForeColor = System.Drawing.Color.Blue;
-            this.lblReceiverAccountCard.Location = new System.Drawing.Point(218, 155);
-            this.lblReceiverAccountCard.MinimumSize = new System.Drawing.Size(200, 20);
-            this.lblReceiverAccountCard.Name = "lblReceiverAccountCard";
-            this.lblReceiverAccountCard.Size = new System.Drawing.Size(200, 20);
-            this.lblReceiverAccountCard.TabIndex = 5;
-            this.lblReceiverAccountCard.Text = "Số thẻ thụ hưởng";
-            this.lblReceiverAccountCard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::ATM.Properties.Resources.in_button;
+            this.button2.Location = new System.Drawing.Point(733, 315);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(250, 50);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Có";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -290,11 +114,11 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(365, 89);
+            this.label1.Location = new System.Drawing.Point(399, 143);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(469, 24);
+            this.label1.Size = new System.Drawing.Size(401, 24);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Xin Quý khách vui lòng xác nhận thông tin chuyển tiền";
+            this.label1.Text = "Quý khách có muốn thực hiện giao dịch khác?";
             // 
             // panelKeyboard
             // 
@@ -499,6 +323,7 @@
             this.btnRightFour.Size = new System.Drawing.Size(68, 40);
             this.btnRightFour.TabIndex = 2;
             this.btnRightFour.UseVisualStyleBackColor = true;
+            this.btnRightFour.Click += new System.EventHandler(this.btnRightFour_Click);
             // 
             // btnRightThree
             // 
@@ -588,17 +413,17 @@
             this.picBoxBackground.TabIndex = 0;
             this.picBoxBackground.TabStop = false;
             // 
-            // frmConfirmCashTransferInfomation
+            // frmPerformAnotherTrans
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1198, 661);
             this.Controls.Add(this.panelContainer);
-            this.Name = "frmConfirmCashTransferInfomation";
+            this.Name = "frmPerformAnotherTrans";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ConfirmTransaction";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmConfirmCashTransferInfomation_FormClosed);
-            this.Shown += new System.EventHandler(this.frmConfirmCashTransferInfomation_Shown);
+            this.Text = "PerformAnotherTrans";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPerformAnotherTrans_FormClosed);
+            this.Shown += new System.EventHandler(this.frmPerformAnotherTrans_Shown);
             this.panelContainer.ResumeLayout(false);
             this.panelContainer.PerformLayout();
             this.panelKeyboard.ResumeLayout(false);
@@ -634,18 +459,7 @@
         private System.Windows.Forms.Button btnNumSeven;
         private System.Windows.Forms.Button btnNumFour;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblSendAccount;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblReceiverAccountCard;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label lblTransactionFee;
-        private System.Windows.Forms.Label lblAmount;
-        private System.Windows.Forms.Label lblReceiverName;
-        private System.Windows.Forms.Label lblReceiverAccountCardNo;
-        private System.Windows.Forms.Label lblSendAccountNo;
+        private System.Windows.Forms.Button button2;
     }
 }
